@@ -17,7 +17,7 @@ Install
 
 Function
 
-Now, it can have Chinese version for windows. 
+Now, it only have Chinese version for windows. 
 And it only can convert binary, intager, single floating point, hex and decimal numbers.
 
 ------------------------------------------------------
