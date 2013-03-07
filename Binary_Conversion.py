@@ -4,13 +4,13 @@ import Tkinter
 import tkMessageBox
 import math
 
-################### µ¥¾«¶È¸¡µã×ª»»´°¿Ú ###########################################
+################### ï¿½ï¿½ï¿½ï¿½ï¿½È¸ï¿½ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ###########################################
 def Floating_and_decimal_window():
     Floating_and_decimal_toplevel=Tkinter.Toplevel()
-    Floating_and_decimal_toplevel.title(u"µ¥¾«¶È¸¡µã×ª»»")
+    Floating_and_decimal_toplevel.title(u"ï¿½ï¿½ï¿½ï¿½ï¿½È¸ï¿½ï¿½ï¿½×ªï¿½ï¿½")
     Floating_and_decimal_toplevel.iconbitmap("bitmap\\binary.ico")
     
-    decimal_label=Tkinter.Label(Floating_and_decimal_toplevel,text=u"Ê®½øÖÆ: ",\
+    decimal_label=Tkinter.Label(Floating_and_decimal_toplevel,text=u"Ê®ï¿½ï¿½ï¿½ï¿½: ",\
                                font="Times 23 bold")
     decimal_label.grid(row=0,column=0)
 
@@ -33,17 +33,17 @@ def Floating_and_decimal_window():
                              "Times 10 bold")
     kong_label.grid(row=0,column=4)
 
-    Convert_button=Tkinter.Button(Floating_and_decimal_toplevel,text=u"×ª»»",\
+    Convert_button=Tkinter.Button(Floating_and_decimal_toplevel,text=u"×ªï¿½ï¿½",\
                                font="Times 23 bold",\
                                   width=17,command=Floating_and_decimal_function)
     Convert_button.grid(row=1,column=1,columnspan=1)
 
-    Clear_button=Tkinter.Button(Floating_and_decimal_toplevel,text=u"Çå³ý",\
+    Clear_button=Tkinter.Button(Floating_and_decimal_toplevel,text=u"ï¿½ï¿½ï¿½ï¿½",\
                                 font="Times 23 bold",\
                                 width=5,command=Clear_Function)
     Clear_button.grid(row=1,column=2,columnspan=2)
 
-    bin_label=Tkinter.Label(Floating_and_decimal_toplevel,text=u"¶þ½øÖÆ: ",\
+    bin_label=Tkinter.Label(Floating_and_decimal_toplevel,text=u"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ",\
                                font="Times 23 bold")
     bin_label.grid(row=2,column=0)
     
@@ -59,7 +59,7 @@ def Clear_Function():
     decimal_exp.delete(0,'end')
     bin_num_entry.delete(0,'end')
     decimal_exp.insert('end','0')
-################## µ¥¾«¶È¸¡µã×ª»»¹¦ÄÜ ##########################################
+################## ï¿½ï¿½ï¿½ï¿½ï¿½È¸ï¿½ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ##########################################
 def Floating_and_decimal_function():
     mantissa_num=decimal_mantissa.get()
     exp_num=decimal_exp.get()
@@ -73,9 +73,9 @@ def Floating_and_decimal_function():
     else:
         bin_decision=0
     if(decimal_decision==1 and bin_decision==1):
-        tkMessageBox.showwarning(u"ÊäÈë´íÎó",u"²»Òª¶¼Ìî¶«Î÷!!")
+        tkMessageBox.showwarning(u"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½",u"ï¿½ï¿½Òªï¿½ï¿½ï¿½î¶«ï¿½ï¿½!!")
     elif(decimal_decision==0 and bin_decision==0):
-        tkMessageBox.showwarning(u"ÊäÈë´íÎó",u"²»ÒªÉ¶¶¼²»Ìî!!")
+        tkMessageBox.showwarning(u"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½",u"ï¿½ï¿½ÒªÉ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½!!")
     elif(bin_decision==1 and decimal_decision==0):
         bin_not_num=0
         try:
@@ -87,9 +87,9 @@ def Floating_and_decimal_function():
                 bin_not_num=1
                 break
         if(bin_not_num==1):
-            tkMessageBox.showwarning(u"ÊäÈë´íÎó",u"²»ÒªË£ÎÒ£¬ÊäÈë¶þ½øÖÆÊý")
+            tkMessageBox.showwarning(u"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½",u"ï¿½ï¿½ÒªË£ï¿½Ò£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½")
         elif(len(bin_num)<>32):
-            tkMessageBox.showwarning(u"ÊäÈë´íÎó",u"¶þ½øÖÆ±ØÐë32 bit!!")
+            tkMessageBox.showwarning(u"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½",u"ï¿½ï¿½ï¿½ï¿½ï¿½Æ±ï¿½ï¿½ï¿½32 bit!!")
         else:
             if(bin_num=="00000000000000000000000000000000"):
                 decimal_mantissa.delete(0,'end')
@@ -137,7 +137,7 @@ def Floating_and_decimal_function():
        if(mantissa_not_num==1 or exp_not_num==1):
            decimal_not_num=1
        if(decimal_not_num==1):
-           tkMessageBox.showwarning(u"ÊäÈë´íÎó",u"²»ÒªË£ÎÒ£¬ÊäÈëÊ®½øÖÆÊý")
+           tkMessageBox.showwarning(u"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½",u"ï¿½ï¿½ÒªË£ï¿½Ò£ï¿½ï¿½ï¿½ï¿½ï¿½Ê®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½")
        elif(mantissa_num=='0'):
            bin_num_entry.delete(0,'end')
            bin_num_entry.insert('end','00000000000000000000000000000000') 
@@ -222,13 +222,13 @@ def Floating_and_decimal_function():
                
 ###############################################################################
 
-################### Ê®Áù½øÖÆÓë¶þ½øÖÆ×ª»»´°¿Ú ###########################################
+################### Ê®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ###########################################
 def hex_2_two_window():
     hex_2_two_toplevel=Tkinter.Toplevel()
-    hex_2_two_toplevel.title(u"Ê®Áù½øÖÆÓë¶þ½øÖÆ×ª»»")
+    hex_2_two_toplevel.title(u"Ê®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½")
     hex_2_two_toplevel.iconbitmap("bitmap\\binary.ico")
     
-    hex_label=Tkinter.Label(hex_2_two_toplevel,text=u"Ê®Áù½øÖÆ: ",\
+    hex_label=Tkinter.Label(hex_2_two_toplevel,text=u"Ê®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ",\
                                font="Times 23 bold")
     hex_label.grid(row=0,column=0)
 
@@ -241,17 +241,17 @@ def hex_2_two_window():
                              "Times 10 bold")
     kong_label.grid(row=0,column=2,columnspan=3)
 
-    Convert_button=Tkinter.Button(hex_2_two_toplevel,text=u"×ª»»",\
+    Convert_button=Tkinter.Button(hex_2_two_toplevel,text=u"×ªï¿½ï¿½",\
                                font="Times 23 bold",\
                                   width=17,command=hex_2_two_function)
     Convert_button.grid(row=1,column=1,columnspan=1)
 
-    Clear_button=Tkinter.Button(hex_2_two_toplevel,text=u"Çå³ý",\
+    Clear_button=Tkinter.Button(hex_2_two_toplevel,text=u"ï¿½ï¿½ï¿½ï¿½",\
                                 font="Times 23 bold",\
                                 width=5,command=hex_2_two_Clear_Function)
     Clear_button.grid(row=1,column=2,columnspan=2)
 
-    bin_label=Tkinter.Label(hex_2_two_toplevel,text=u"¶þ½øÖÆ: ",\
+    bin_label=Tkinter.Label(hex_2_two_toplevel,text=u"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ",\
                                font="Times 23 bold")
     bin_label.grid(row=2,column=0)
     
@@ -271,9 +271,9 @@ def hex_2_two_function():
     HexNumber=hex_number_entry.get()
     BinNumber=bin_num_entry_hex_2_two.get()
     if(len(HexNumber)<>0 and len(BinNumber)<>0):
-        tkMessageBox.showwarning(u"ÊäÈë´íÎó",u"²»ÒªÉ¶¶¼Ìî¶«Î÷£¬ÎÒÖªµÀ×ª»¯Ë­Ã´£¿")
+        tkMessageBox.showwarning(u"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½",u"ï¿½ï¿½ÒªÉ¶ï¿½ï¿½ï¿½î¶«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öªï¿½ï¿½×ªï¿½ï¿½Ë­Ã´ï¿½ï¿½")
     elif(len(HexNumber)==0 and len(BinNumber)==0):
-        tkMessageBox.showwarning(u"ÊäÈë´íÎó",u"É¶¶¼²»Êä£¿")
+        tkMessageBox.showwarning(u"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½",u"É¶ï¿½ï¿½ï¿½ï¿½ï¿½ä£¿")
     elif(len(HexNumber)<>0 and len(BinNumber)==0):
         wrong=0
         try:
@@ -281,7 +281,7 @@ def hex_2_two_function():
         except ValueError:
             wrong=1
         if(wrong==1):
-            tkMessageBox.showwarning(u"ÊäÈë´íÎó",u"ÇëÊäÈëÕýÈ·Ê®Áù½øÖÆÊý")
+            tkMessageBox.showwarning(u"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½",u"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È·Ê®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½")
         else:
             final_answer=bin(final_answer)
             final_answer=final_answer[final_answer.rfind('b')+1:\
@@ -295,7 +295,7 @@ def hex_2_two_function():
         except ValueError:
             wrong=1
         if(wrong==1):
-            tkMessageBox.showwarning(u"ÊäÈë´íÎó",u"ÇëÊäÈëÕýÈ·¶þ½øÖÆÊý")
+            tkMessageBox.showwarning(u"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½",u"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½")
         else:
             final_answer=hex(final_answer)
             final_answer=final_answer[final_answer.rfind('x')+1:\
@@ -304,13 +304,13 @@ def hex_2_two_function():
             hex_number_entry.insert('end',final_answer.upper())
 ###############################################################################
 
-################### Ê®Áù½øÖÆÓëÊ®½øÖÆ×ª»»´°¿Ú ###########################################
+################### Ê®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê®ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ###########################################
 def hex_2_ten_window():
     hex_2_ten_toplevel=Tkinter.Toplevel()
-    hex_2_ten_toplevel.title(u"Ê®Áù½øÖÆÓëÊ®½øÖÆ×ª»»")
+    hex_2_ten_toplevel.title(u"Ê®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê®ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½")
     hex_2_ten_toplevel.iconbitmap("bitmap\\binary.ico")
     
-    hex_label=Tkinter.Label(hex_2_ten_toplevel,text=u"Ê®Áù½øÖÆ: ",\
+    hex_label=Tkinter.Label(hex_2_ten_toplevel,text=u"Ê®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ",\
                                font="Times 23 bold")
     hex_label.grid(row=0,column=0)
 
@@ -323,17 +323,17 @@ def hex_2_ten_window():
                              "Times 10 bold")
     kong_label.grid(row=0,column=2,columnspan=3)
 
-    Convert_button=Tkinter.Button(hex_2_ten_toplevel,text=u"×ª»»",\
+    Convert_button=Tkinter.Button(hex_2_ten_toplevel,text=u"×ªï¿½ï¿½",\
                                font="Times 23 bold",\
                                   width=17,command=hex_2_ten_function)
     Convert_button.grid(row=1,column=1,columnspan=1)
 
-    Clear_button=Tkinter.Button(hex_2_ten_toplevel,text=u"Çå³ý",\
+    Clear_button=Tkinter.Button(hex_2_ten_toplevel,text=u"ï¿½ï¿½ï¿½ï¿½",\
                                 font="Times 23 bold",\
                                 width=5,command=hex_2_ten_Clear_Function)
     Clear_button.grid(row=1,column=2,columnspan=2)
 
-    bin_label=Tkinter.Label(hex_2_ten_toplevel,text=u"Ê®½øÖÆ: ",\
+    bin_label=Tkinter.Label(hex_2_ten_toplevel,text=u"Ê®ï¿½ï¿½ï¿½ï¿½: ",\
                                font="Times 23 bold")
     bin_label.grid(row=2,column=0)
     
@@ -352,9 +352,9 @@ def hex_2_ten_function():
     HexNumber=hex_number_entry_2_ten.get()
     BinNumber=bin_num_entry_hex_2_ten.get()
     if(len(HexNumber)<>0 and len(BinNumber)<>0):
-        tkMessageBox.showwarning(u"ÊäÈë´íÎó",u"²»ÒªÉ¶¶¼Ìî¶«Î÷£¬ÎÒÖªµÀ×ª»¯Ë­Ã´£¿")
+        tkMessageBox.showwarning(u"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½",u"ï¿½ï¿½ÒªÉ¶ï¿½ï¿½ï¿½î¶«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öªï¿½ï¿½×ªï¿½ï¿½Ë­Ã´ï¿½ï¿½")
     elif(len(HexNumber)==0 and len(BinNumber)==0):
-        tkMessageBox.showwarning(u"ÊäÈë´íÎó",u"É¶¶¼²»Êä£¿")
+        tkMessageBox.showwarning(u"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½",u"É¶ï¿½ï¿½ï¿½ï¿½ï¿½ä£¿")
     elif(len(HexNumber)<>0 and len(BinNumber)==0):
         wrong=0
         try:
@@ -362,7 +362,7 @@ def hex_2_ten_function():
         except ValueError:
             wrong=1
         if(wrong==1):
-            tkMessageBox.showwarning(u"ÊäÈë´íÎó",u"ÇëÊäÈëÕýÈ·Ê®Áù½øÖÆÊý")
+            tkMessageBox.showwarning(u"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½",u"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È·Ê®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½")
         else:
             bin_num_entry_hex_2_ten.delete(0,'end')
             bin_num_entry_hex_2_ten.insert('end',final_answer)
@@ -375,7 +375,7 @@ def hex_2_ten_function():
         except TypeError:
             wrong=1
         if(wrong==1):
-            tkMessageBox.showwarning(u"ÊäÈë´íÎó",u"ÇëÊäÈëÕýÈ·Ê®½øÖÆÕûÊý")
+            tkMessageBox.showwarning(u"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½",u"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È·Ê®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½")
         else:
             final_answer=hex(final_answer)
             final_answer=final_answer[final_answer.rfind('x')+1:\
@@ -385,13 +385,13 @@ def hex_2_ten_function():
 
 ###############################################################################
 
-################### ¶þ½øÖÆÓëÊ®½øÖÆ×ª»»´°¿Ú ###########################################
+################### ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê®ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ###########################################
 def two_2_ten_window():
     two_2_ten_toplevel=Tkinter.Toplevel()
-    two_2_ten_toplevel.title(u"¶þ½øÖÆÓëÊ®½øÖÆ×ª»»")
+    two_2_ten_toplevel.title(u"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê®ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½")
     two_2_ten_toplevel.iconbitmap("bitmap\\binary.ico")
     
-    two_label=Tkinter.Label(two_2_ten_toplevel,text=u"¶þ½øÖÆ: ",\
+    two_label=Tkinter.Label(two_2_ten_toplevel,text=u"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ",\
                                font="Times 23 bold")
     two_label.grid(row=0,column=0)
 
@@ -404,17 +404,17 @@ def two_2_ten_window():
                              "Times 10 bold")
     kong_label.grid(row=0,column=2,columnspan=3)
 
-    Convert_button=Tkinter.Button(two_2_ten_toplevel,text=u"×ª»»",\
+    Convert_button=Tkinter.Button(two_2_ten_toplevel,text=u"×ªï¿½ï¿½",\
                                font="Times 23 bold",\
                                   width=17,command=two_2_ten_function)
     Convert_button.grid(row=1,column=1,columnspan=1)
 
-    Clear_button=Tkinter.Button(two_2_ten_toplevel,text=u"Çå³ý",\
+    Clear_button=Tkinter.Button(two_2_ten_toplevel,text=u"ï¿½ï¿½ï¿½ï¿½",\
                                 font="Times 23 bold",\
                                 width=5,command=two_2_ten_Clear_Function)
     Clear_button.grid(row=1,column=2,columnspan=2)
 
-    ten_label=Tkinter.Label(two_2_ten_toplevel,text=u"Ê®½øÖÆ: ",\
+    ten_label=Tkinter.Label(two_2_ten_toplevel,text=u"Ê®ï¿½ï¿½ï¿½ï¿½: ",\
                                font="Times 23 bold")
     ten_label.grid(row=2,column=0)
     
@@ -433,9 +433,9 @@ def two_2_ten_function():
     TwoNumber=two_number_entry_two_2_ten.get()
     TenNumber=ten_num_entry_two_2_ten.get()
     if(len(TwoNumber)<>0 and len(TenNumber)<>0):
-        tkMessageBox.showwarning(u"ÊäÈë´íÎó",u"²»ÒªÉ¶¶¼Ìî¶«Î÷£¬ÎÒÖªµÀ×ª»¯Ë­Ã´£¿")
+        tkMessageBox.showwarning(u"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½",u"ï¿½ï¿½ÒªÉ¶ï¿½ï¿½ï¿½î¶«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öªï¿½ï¿½×ªï¿½ï¿½Ë­Ã´ï¿½ï¿½")
     elif(len(TwoNumber)==0 and len(TenNumber)==0):
-        tkMessageBox.showwarning(u"ÊäÈë´íÎó",u"É¶¶¼²»Êä£¿")
+        tkMessageBox.showwarning(u"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½",u"É¶ï¿½ï¿½ï¿½ï¿½ï¿½ä£¿")
     elif(len(TenNumber)<>0 and len(TwoNumber)==0):
         wrong=0
         try:
@@ -445,7 +445,7 @@ def two_2_ten_function():
         except TypeError:
             wrong=1
         if(wrong==1):
-            tkMessageBox.showwarning(u"ÊäÈë´íÎó",u"ÇëÊäÈëÕýÈ·Ê®½øÖÆÕûÊý")
+            tkMessageBox.showwarning(u"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½",u"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È·Ê®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½")
         else:
             final_answer=bin(final_answer)
             final_answer=final_answer[final_answer.rfind('b')+1:\
@@ -461,7 +461,7 @@ def two_2_ten_function():
         except TypeError:
             wrong=1
         if(wrong==1):
-            tkMessageBox.showwarning(u"ÊäÈë´íÎó",u"ÇëÊäÈëÕýÈ·¶þ½øÖÆÊý")
+            tkMessageBox.showwarning(u"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½",u"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½")
         else:
             ten_num_entry_two_2_ten.delete(0,'end')
             ten_num_entry_two_2_ten.insert('end',final_answer)
@@ -473,7 +473,7 @@ def AboutUs_Open():
     AboutUs.title("About me")
     AboutUs.iconbitmap("bitmap\\binary.ico")
 
-    TitleLabel=Tkinter.Label(AboutUs,text=u"½øÖÆ×ª»»Æ÷",\
+    TitleLabel=Tkinter.Label(AboutUs,text=u"ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½",\
                          font="Times 23 bold",fg="red")
     TitleLabel.pack(side="top",padx=2,pady=1,ipadx=1,ipady=1)
 
@@ -484,43 +484,43 @@ def AboutUs_Open():
    #BitLabel=Tkinter.Label(AboutUs,image="bitmap\\home.ico")
    #BitLabel.pack(side="top",padx=2,pady=1,ipadx=1,ipady=1)
 
-    SoftwareLabel=Tkinter.Message(AboutUs,text="""                 Wang Ze
-wangze19910407@gmail.com"""\
+    SoftwareLabel=Tkinter.Message(AboutUs,text="""                 pikipity
+pikipityw@gmail.com"""\
                         ,font="Times 15 bold",\
                            fg="#D2691E",width=600)
     SoftwareLabel.pack(side="top",padx=2,pady=1,ipadx=1,ipady=1)
 
-    ContentLabel=Tkinter.Message(AboutUs,text=u"""Èç¹û·¢ÏÖÊ²Ã´ÎÊÌâ£¬ÇëÁªÏµÎÒ£¬Ð»Ð»""",font="Times 13 bold",fg="#CD5C5C",width=600)
+    ContentLabel=Tkinter.Message(AboutUs,text=u"""ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê²Ã´ï¿½ï¿½ï¿½â£¬ï¿½ï¿½ï¿½ï¿½Ïµï¿½Ò£ï¿½Ð»Ð»""",font="Times 13 bold",fg="#CD5C5C",width=600)
     ContentLabel.pack(side="top",padx=2,pady=1,ipadx=1,ipady=1)
     
-#################### Ö÷´°¿Ú ####################################################
+#################### ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ####################################################
 root=Tkinter.Tk()
-root.title(u"½øÖÆ×ª»»")
+root.title(u"ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½")
 root.iconbitmap("bitmap\\binary.ico")
 
 MainFrame=Tkinter.Frame(root,borderwidth=2,width=200,height=300)
 MainFrame.pack(fill='y',expand=1,padx=15,pady=5,ipadx=5,ipady=9)
 
 Floating_and_decimal=Tkinter.Button(MainFrame,borderwidth=1,\
-                               text=u"µ¥¾«¶È¸¡µã×ª»»",\
+                               text=u"ï¿½ï¿½ï¿½ï¿½ï¿½È¸ï¿½ï¿½ï¿½×ªï¿½ï¿½",\
                                font="Times 23 bold",\
                                 command=Floating_and_decimal_window)
 Floating_and_decimal.pack(fill='both',expand=1,padx=2,pady=1,ipadx=2,ipady=1)
 
 hex_two=Tkinter.Button(MainFrame,borderwidth=1,\
-                               text=u"Ê®Áù½øÖÆÓë¶þ½øÖÆ×ª»»",\
+                               text=u"Ê®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½",\
                                font="Times 23 bold",\
                        command=hex_2_two_window)
 hex_two.pack(fill='both',expand=1,padx=2,pady=1,ipadx=2,ipady=1)
 
 hex_ten=Tkinter.Button(MainFrame,borderwidth=1,\
-                               text=u"Ê®Áù½øÖÆÓëÊ®½øÖÆ×ª»»",\
+                               text=u"Ê®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê®ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½",\
                                font="Times 23 bold",\
                        command=hex_2_ten_window)
 hex_ten.pack(fill='both',expand=1,padx=2,pady=1,ipadx=2,ipady=1)
 
 two_ten=Tkinter.Button(MainFrame,borderwidth=1,\
-                               text=u"¶þ½øÖÆÓëÊ®½øÖÆ×ª»»",\
+                               text=u"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê®ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½",\
                                font="Times 23 bold",\
                        command=two_2_ten_window)
 two_ten.pack(fill='both',expand=1,padx=2,pady=1,ipadx=2,ipady=1)
